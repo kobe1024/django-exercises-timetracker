@@ -1,0 +1,6 @@
+Django
+psycopg2
+South
+Sphinx
+pysqlite
+django-extensions 
