@@ -2,6 +2,8 @@ from django.db import models
 
 from django.contrib.auth.models import User
 
+import datetime
+
 class CostHolder(models.Model):
     """Represents the cost holder to which all activities are referred.
 
@@ -9,36 +11,49 @@ class CostHolder(models.Model):
     which is the object the customer pays for
     """
 
-    name = charfield 256 
-    description = text blank
-    user_set = manytomany al modello User blank null
-    status = charfield 32 choices CREATED, OPEN, CLOSE
+    STATUS_CHOICES = (
+        ('CREATED', 'Created'),
+        ('OPEN', 'Open'),
+        ('CLOSE', 'Close')
+    )
+
+    name = models.CharField(max_length=256) 
+    description = models.TextField(blank=True)
+    user_set = models.ManyToManyField(User, related_name='u+', blank=True, null=True)
+    status = models.CharField(max_length=32, choices=STATUS_CHOICES)
 
     @property
     def delta(self):
-        return totale delta activity
+        activities = self.activity_set.all()
+        
+        return self.__delta_for_activities(activities) #totale delta activity
 
-    @property
     def delta_for_user(self, user):
-        return totale delta activity per utente specifico
+        activities = self.activity_set.filter(user=user)
+        
+        return self.__delta_for_activities(activities) #totale delta activity per utente specifico
+
+    def __delta_for_activities(self,activities):
+        counter = datetime.timedelta(0)
+        for activity in activities:
+            counter = counter + activity.delta
+        
+        return counter
 
 
 class Activity(models.Model):
 
-    cost_holder = foreignkey CostHolder
-    user = foreignkey User
-    name = char 512 blank
-    notes = text blank # not used probably
-    start_datetime = datetimefield null blank
-    end_datetime = datetimefield null blank
+    cost_holder = models.ForeignKey(CostHolder)
+    user = models.ForeignKey(User)
+    name = models.CharField(max_length=512,blank=True)
+    notes = models.TextField(blank=True) # not used probably
+    start_datetime = models.DateTimeField(null=True,blank=True)
+    end_datetime = models.DateTimeField(null=True,blank=True)
 
     class Meta:
-        ordering = inverso dello start datetime con start = null in alto
+        ordering = ['-start_datetime'] #inverso dello start datetime con start = null in alto
 
     @property
     def delta(self):
-        return self.end_datetime - self.start_datetime
+        return self.end_datetime - self.start_datetime #return a timedelta
     
-    
-    
-
