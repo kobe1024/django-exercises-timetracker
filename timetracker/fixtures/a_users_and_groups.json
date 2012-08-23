@@ -265,24 +265,6 @@
         }
     }, 
     {
-        "pk": 1, 
-        "model": "auth.user", 
-        "fields": {
-            "username": "admin", 
-            "first_name": "", 
-            "last_name": "", 
-            "is_active": true, 
-            "is_superuser": true, 
-            "is_staff": true, 
-            "last_login": "2012-08-23T15:12:32.270Z", 
-            "groups": [], 
-            "user_permissions": [], 
-            "password": "pbkdf2_sha256$10000$jg7Uikq0QxNn$nu9nOpB3Loc2+j8RTiWzuV/a0KWb21QrnFnztMzsY5Q=", 
-            "email": "admin@live.it", 
-            "date_joined": "2012-08-23T14:53:37.549Z"
-        }
-    }, 
-    {
         "pk": 2, 
         "model": "auth.user", 
         "fields": {
