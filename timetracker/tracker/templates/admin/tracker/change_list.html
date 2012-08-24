@@ -1,0 +1,52 @@
+{% extends "admin/change_list.html" %}
+{% load i18n admin_static admin_list %}
+{% load url from future %}
+{% load admin_urls %}
+
+{% block extrastyle %}
+    {{ block.super }}
+    <style type="text/css">
+        .start {
+            width: 35px;
+            padding: 0.2em 0.4em;
+            border: solid green 2px;
+            background-color: green;
+            color: white; 
+            border-radius: 30px;
+        }
+        
+        .start:hover {
+            background-color: #29610D;
+        }
+
+        
+    </style>
+{% endblock %}
+
+{% block extrahead %}
+    {{ block.super }}
+        <script type="text/javascript">
+
+            function started(el) {
+                if (el === undefined) {
+                    el = django.jQuery(this);
+                }
+                el.html('STARTED');
+                el.css('width', '51px');
+            }
+
+            function start() {
+
+                var el = django.jQuery(this);
+                var el_id = parseInt(el.attr('activity-id'),10);
+                alert(el_id+' '+el.attr('activity-id'));
+                django.jQuery.ajax({
+                    url: './start_activity/' + el_id,
+                    success: function(data) {
+                        started(el);
+                    }
+                });
+            }
+        </script>
+{% endblock %}
+

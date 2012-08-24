@@ -12,7 +12,7 @@ class ActivityAdmin(admin.ModelAdmin):
     #WAS: list_display = ('__unicode__','cost_holder','start_datetime','end_datetime')
  
     list_display = (
-        '__unicode__','cost_holder', 
+        'pk', '__unicode__','cost_holder', 
         'starttime_button', 'start_datetime',
         'end_datetime',
     )
@@ -20,52 +20,13 @@ class ActivityAdmin(admin.ModelAdmin):
    
     def starttime_button(self,obj):
         start_time = obj.start_datetime
-        #WAS: out = "<a id=\"start\" onclick=\"start()\" href=\"start_activity/%d\">START</a>" % obj.pk
-        out = "<p id=\"start_%d\" class=\"start\" onclick=\"start();\" >START</p>" % obj.pk
-        print obj.start_datetime
-        out += '''
-        <script type="text/javascript">
-            var status_%d = '%s';
-            
-            if(status_%d != 'None')
-            {
-                started();
-            }
 
-            function started()
-            {
-                var button = document.getElementById('start_%d');
-                button.textContent = 'STARTED';
-                button.style.width = '51px';
-            }
+        if start_time:
+            out = "<span activity-id=\"%s\" id=\"start_%d\" class=\"started\" >STARTED</span>" % (obj.pk, obj.pk)
+        else:
+            #WAS: out = "<a id=\"start\" onclick=\"start()\" href=\"start_activity/%d\">START</a>" % obj.pk
+            out = "<span activity-id=\"%s\" id=\"start_%d\" class=\"start\" onclick=\"start();\" >START</span>" % (obj.pk, obj.pk)
 
-            function start()
-            {
-                //alert("d");
-                django.jQuery.ajax({
-                    url: './start_activity/%d',
-                    success: function(data) {
-                        //alert('Load was performed.');
-                        started();
-                    }
-                });
-            }
-        </script>
-        <style>
-            .start {
-                width: 35px;
-                padding: 0.2em 0.4em;
-                border: solid green 2px;
-                background-color: green;
-                color: white; 
-                border-radius: 30px;
-            }
-            
-            .start:hover {
-                background-color: #29610D;
-            }
-        </style>
-        ''' % (obj.pk, start_time,  obj.pk, obj.pk, obj.pk)   
         return out
 
     starttime_button.allow_tags = True
