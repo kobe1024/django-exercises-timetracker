@@ -19,8 +19,17 @@ class CostHolder(models.Model):
 
     name = models.CharField(max_length=256) 
     description = models.TextField(blank=True)
-    user_set = models.ManyToManyField(User, related_name='u+', blank=True, null=True)
+   #WAS:  user_set = models.ManyToManyField(User, related_name='u+', blank=True, null=True)
+    user_set = models.ManyToManyField(User, related_name='u', blank=True, null=True)
     status = models.CharField(max_length=32, choices=STATUS_CHOICES)
+
+    def create_activities(self):
+        for user in self.user_set.all():
+            Activity.objects.get_or_create(cost_holder=self, user=user)
+
+    def save(self, *args, **kw):
+        super(CostHolder, self).save(*args, **kw)
+        self.create_activities()
 
     @property
     def delta(self):
@@ -49,6 +58,9 @@ class Activity(models.Model):
     notes = models.TextField(blank=True) # not used probably
     start_datetime = models.DateTimeField(null=True,blank=True)
     end_datetime = models.DateTimeField(null=True,blank=True)
+
+    def __unicode__(self):
+        return u"%s" % self.name
 
     class Meta:
         ordering = ['-start_datetime'] #inverso dello start datetime con start = null in alto
