@@ -11,7 +11,12 @@ from datetime import datetime
 class ActivityAdmin(admin.ModelAdmin):
     #WAS: list_display = ('__unicode__','cost_holder','start_datetime','end_datetime')
  
-    list_display = ('__unicode__','cost_holder','starttime_button','end_datetime')
+    list_display = (
+        '__unicode__','cost_holder', 
+        'starttime_button', 'start_datetime',
+        'end_datetime',
+    )
+    list_editable = ('start_datetime', 'end_datetime')
    
     def starttime_button(self,obj):
         start_time = obj.start_datetime
