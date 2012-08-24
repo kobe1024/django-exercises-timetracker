@@ -4,6 +4,7 @@ from django.contrib import admin
 from django.conf.urls import patterns
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
 
 from datetime import datetime
 
@@ -13,8 +14,55 @@ class ActivityAdmin(admin.ModelAdmin):
     list_display = ('__unicode__','cost_holder','starttime_button','end_datetime')
    
     def starttime_button(self,obj):
-        print obj.pk
-        return "<a href=\"start_activity/%d\"> fuffa </a>" % obj.pk
+        start_time = obj.start_datetime
+        #WAS: out = "<a id=\"start\" onclick=\"start()\" href=\"start_activity/%d\">START</a>" % obj.pk
+        out = "<p id=\"start_%d\" class=\"start\" onclick=\"start();\" >START</p>" % obj.pk
+        print obj.start_datetime
+        out += '''
+        <script type="text/javascript">
+            var status_%d = '%s';
+            
+            if(status_%d != 'None')
+            {
+                started();
+            }
+
+            function started()
+            {
+                var button = document.getElementById('start_%d');
+                button.textContent = 'STARTED';
+                button.style.width = '51px';
+            }
+
+            function start()
+            {
+                //alert("d");
+                django.jQuery.ajax({
+                    url: './start_activity/%d',
+                    success: function(data) {
+                        //alert('Load was performed.');
+                        started();
+                    }
+                });
+            }
+        </script>
+        <style>
+            .start {
+                width: 35px;
+                padding: 0.2em 0.4em;
+                border: solid green 2px;
+                background-color: green;
+                color: white; 
+                border-radius: 30px;
+            }
+            
+            .start:hover {
+                background-color: #29610D;
+            }
+        </style>
+        ''' % (obj.pk, start_time,  obj.pk, obj.pk, obj.pk)   
+        return out
+
     starttime_button.allow_tags = True
 
     def get_urls(self):
@@ -24,19 +72,38 @@ class ActivityAdmin(admin.ModelAdmin):
         )
         return my_urls + urls
 
+    #@login_required
     def starttime_button_view(self, request, activity_id):
-        print activity_id
+        print "manina cliccatina"
         activity = get_object_or_404(Activity, pk=activity_id)
         activity.start_datetime = datetime.now()
         activity.save()
         return HttpResponse("Complimenti, hai appena aggiunto lo start_time alla tua activity :3 !!! Lo start_time ora vale:%s\n%s" % (activity.start_datetime,"<a href=\"../..\"> back </a>"))
 
-'''    def get_changelist(self,request):
+    def queryset(self, request):
+        qs = super(ActivityAdmin, self).queryset(request)
+        #if request.user.is_superuser:
+        #    return qs
+        user_cost_holders = request.user.costholder_set.all()
+        return qs.filter(
+            cost_holder__in=user_cost_holders,
+            user=request.user
+        )
+
+    def changelist_view(self, request, extra_context=None):
         user = request.user
         for ch in user.costholder_set.all():
-            Activity.objects.get_or_create(costholder=self, user=user, start_datetime__isnull = True)
-        return super(ActivityAdmin, self).get_changelist(request)
-'''
+            act, created = Activity.objects.get_or_create(
+                cost_holder=ch, 
+                user=user, 
+                start_datetime__isnull = True
+            )
+            print(act, created)
+
+        # Restrict rows to costholders belonging to user
+        rv = super(ActivityAdmin, self).changelist_view(request, extra_context=extra_context)
+        return rv
+
 admin.site.register(CostHolder)
 admin.site.register(Activity, ActivityAdmin)
 

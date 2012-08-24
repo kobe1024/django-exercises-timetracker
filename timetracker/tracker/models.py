@@ -20,12 +20,15 @@ class CostHolder(models.Model):
     name = models.CharField(max_length=256) 
     description = models.TextField(blank=True)
    #WAS:  user_set = models.ManyToManyField(User, related_name='u+', blank=True, null=True)
-    user_set = models.ManyToManyField(User, related_name='u', blank=True, null=True)
+    user_set = models.ManyToManyField(User, blank=True, null=True)
     status = models.CharField(max_length=32, choices=STATUS_CHOICES)
 
     def create_activities(self):
         for user in self.user_set.all():
             Activity.objects.get_or_create(cost_holder=self, user=user)
+
+    def __unicode__(self):
+        return self.name
 
     def save(self, *args, **kw):
         super(CostHolder, self).save(*args, **kw)
