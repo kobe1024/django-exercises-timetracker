@@ -1,0 +1,467 @@
+- fields:
+    codename: add_logentry
+    content_type: [admin, logentry]
+    name: Can add log entry
+  model: auth.permission
+  pk: 1
+- fields:
+    codename: change_logentry
+    content_type: [admin, logentry]
+    name: Can change log entry
+  model: auth.permission
+  pk: 2
+- fields:
+    codename: delete_logentry
+    content_type: [admin, logentry]
+    name: Can delete log entry
+  model: auth.permission
+  pk: 3
+- fields:
+    codename: add_permission
+    content_type: [auth, permission]
+    name: Can add permission
+  model: auth.permission
+  pk: 4
+- fields:
+    codename: change_permission
+    content_type: [auth, permission]
+    name: Can change permission
+  model: auth.permission
+  pk: 5
+- fields:
+    codename: delete_permission
+    content_type: [auth, permission]
+    name: Can delete permission
+  model: auth.permission
+  pk: 6
+- fields:
+    codename: add_group
+    content_type: [auth, group]
+    name: Can add group
+  model: auth.permission
+  pk: 7
+- fields:
+    codename: change_group
+    content_type: [auth, group]
+    name: Can change group
+  model: auth.permission
+  pk: 8
+- fields:
+    codename: delete_group
+    content_type: [auth, group]
+    name: Can delete group
+  model: auth.permission
+  pk: 9
+- fields:
+    codename: add_user
+    content_type: [auth, user]
+    name: Can add user
+  model: auth.permission
+  pk: 10
+- fields:
+    codename: change_user
+    content_type: [auth, user]
+    name: Can change user
+  model: auth.permission
+  pk: 11
+- fields:
+    codename: delete_user
+    content_type: [auth, user]
+    name: Can delete user
+  model: auth.permission
+  pk: 12
+- fields:
+    codename: add_contenttype
+    content_type: [contenttypes, contenttype]
+    name: Can add content type
+  model: auth.permission
+  pk: 13
+- fields:
+    codename: change_contenttype
+    content_type: [contenttypes, contenttype]
+    name: Can change content type
+  model: auth.permission
+  pk: 14
+- fields:
+    codename: delete_contenttype
+    content_type: [contenttypes, contenttype]
+    name: Can delete content type
+  model: auth.permission
+  pk: 15
+- fields:
+    codename: add_session
+    content_type: [sessions, session]
+    name: Can add session
+  model: auth.permission
+  pk: 16
+- fields:
+    codename: change_session
+    content_type: [sessions, session]
+    name: Can change session
+  model: auth.permission
+  pk: 17
+- fields:
+    codename: delete_session
+    content_type: [sessions, session]
+    name: Can delete session
+  model: auth.permission
+  pk: 18
+- fields:
+    codename: add_costholder
+    content_type: [tracker, costholder]
+    name: Can add cost holder
+  model: auth.permission
+  pk: 19
+- fields:
+    codename: change_costholder
+    content_type: [tracker, costholder]
+    name: Can change cost holder
+  model: auth.permission
+  pk: 20
+- fields:
+    codename: delete_costholder
+    content_type: [tracker, costholder]
+    name: Can delete cost holder
+  model: auth.permission
+  pk: 21
+- fields:
+    codename: add_goal
+    content_type: [tracker, goal]
+    name: Can add goal
+  model: auth.permission
+  pk: 22
+- fields:
+    codename: change_goal
+    content_type: [tracker, goal]
+    name: Can change goal
+  model: auth.permission
+  pk: 23
+- fields:
+    codename: delete_goal
+    content_type: [tracker, goal]
+    name: Can delete goal
+  model: auth.permission
+  pk: 24
+- fields:
+    codename: add_result
+    content_type: [tracker, result]
+    name: Can add Pragmatical Result
+  model: auth.permission
+  pk: 25
+- fields:
+    codename: change_result
+    content_type: [tracker, result]
+    name: Can change Pragmatical Result
+  model: auth.permission
+  pk: 26
+- fields:
+    codename: delete_result
+    content_type: [tracker, result]
+    name: Can delete Pragmatical Result
+  model: auth.permission
+  pk: 27
+- fields:
+    codename: add_activity
+    content_type: [tracker, activity]
+    name: Can add activity
+  model: auth.permission
+  pk: 28
+- fields:
+    codename: change_activity
+    content_type: [tracker, activity]
+    name: Can change activity
+  model: auth.permission
+  pk: 29
+- fields:
+    codename: delete_activity
+    content_type: [tracker, activity]
+    name: Can delete activity
+  model: auth.permission
+  pk: 30
+- fields:
+    codename: add_activityrecord
+    content_type: [tracker, activityrecord]
+    name: Can add activity record
+  model: auth.permission
+  pk: 31
+- fields:
+    codename: change_activityrecord
+    content_type: [tracker, activityrecord]
+    name: Can change activity record
+  model: auth.permission
+  pk: 32
+- fields:
+    codename: delete_activityrecord
+    content_type: [tracker, activityrecord]
+    name: Can delete activity record
+  model: auth.permission
+  pk: 33
+- fields:
+    name: Managers
+    permissions:
+    - [add_costholder, tracker, costholder]
+    - [change_costholder, tracker, costholder]
+  model: auth.group
+  pk: 1
+- fields:
+    name: Workers
+    permissions:
+    - [add_activity, tracker, activity]
+    - [change_activity, tracker, activity]
+  model: auth.group
+  pk: 2
+- fields:
+    date_joined: 2013-12-05 10:32:29.315000+00:00
+    email: kobe@befair.it
+    first_name: ''
+    groups: []
+    is_active: true
+    is_staff: true
+    is_superuser: true
+    last_login: 2013-12-12 23:11:04.603699+00:00
+    last_name: ''
+    password: pbkdf2_sha256$12000$iXNLhVJZOO6F$KU+oCmB0MEN65fnMJxAYyZCogt5mgJ7EcZM8zVy2fx8=
+    user_permissions: []
+    username: kobe
+  model: auth.user
+  pk: 1
+- fields:
+    date_joined: 2013-12-05 11:33:43+00:00
+    email: ''
+    first_name: ''
+    groups:
+    - [Workers]
+    is_active: true
+    is_staff: false
+    is_superuser: false
+    last_login: 2013-12-05 11:33:43+00:00
+    last_name: ''
+    password: pbkdf2_sha256$12000$q6RolrfIVXEn$ZR68YwpJwwnHL7yyUdYGydSCAK+odAlVi9Ww4mxW23Y=
+    user_permissions: []
+    username: Worker0
+  model: auth.user
+  pk: 2
+- fields:
+    date_joined: 2013-12-05 11:33:43+00:00
+    email: ''
+    first_name: ''
+    groups:
+    - [Workers]
+    is_active: true
+    is_staff: false
+    is_superuser: false
+    last_login: 2013-12-05 11:33:43+00:00
+    last_name: ''
+    password: pbkdf2_sha256$12000$q6RolrfIVXEn$ZR68YwpJwwnHL7yyUdYGydSCAK+odAlVi9Ww4mxW23Y=
+    user_permissions: []
+    username: Worker1
+  model: auth.user
+  pk: 3
+- fields:
+    date_joined: 2013-12-05 11:33:43+00:00
+    email: ''
+    first_name: ''
+    groups:
+    - [Workers]
+    is_active: true
+    is_staff: false
+    is_superuser: false
+    last_login: 2013-12-05 11:33:43+00:00
+    last_name: ''
+    password: pbkdf2_sha256$12000$q6RolrfIVXEn$ZR68YwpJwwnHL7yyUdYGydSCAK+odAlVi9Ww4mxW23Y=
+    user_permissions: []
+    username: Worker2
+  model: auth.user
+  pk: 4
+- fields:
+    date_joined: 2013-12-05 11:33:43+00:00
+    email: ''
+    first_name: ''
+    groups:
+    - [Workers]
+    is_active: true
+    is_staff: false
+    is_superuser: false
+    last_login: 2013-12-05 11:33:43+00:00
+    last_name: ''
+    password: pbkdf2_sha256$12000$q6RolrfIVXEn$ZR68YwpJwwnHL7yyUdYGydSCAK+odAlVi9Ww4mxW23Y=
+    user_permissions: []
+    username: Worker3
+  model: auth.user
+  pk: 5
+- fields:
+    date_joined: 2013-12-05 11:33:43+00:00
+    email: ''
+    first_name: ''
+    groups:
+    - [Workers]
+    is_active: true
+    is_staff: false
+    is_superuser: false
+    last_login: 2013-12-05 11:33:43+00:00
+    last_name: ''
+    password: pbkdf2_sha256$12000$q6RolrfIVXEn$ZR68YwpJwwnHL7yyUdYGydSCAK+odAlVi9Ww4mxW23Y=
+    user_permissions: []
+    username: Worker4
+  model: auth.user
+  pk: 6
+- fields:
+    date_joined: 2013-12-05 11:33:43+00:00
+    email: ''
+    first_name: ''
+    groups:
+    - [Workers]
+    is_active: true
+    is_staff: false
+    is_superuser: false
+    last_login: 2013-12-05 11:33:43+00:00
+    last_name: ''
+    password: pbkdf2_sha256$12000$q6RolrfIVXEn$ZR68YwpJwwnHL7yyUdYGydSCAK+odAlVi9Ww4mxW23Y=
+    user_permissions: []
+    username: Worker5
+  model: auth.user
+  pk: 7
+- fields:
+    date_joined: 2013-12-05 11:33:43+00:00
+    email: ''
+    first_name: ''
+    groups:
+    - [Workers]
+    is_active: true
+    is_staff: false
+    is_superuser: false
+    last_login: 2013-12-05 11:33:43+00:00
+    last_name: ''
+    password: pbkdf2_sha256$12000$q6RolrfIVXEn$ZR68YwpJwwnHL7yyUdYGydSCAK+odAlVi9Ww4mxW23Y=
+    user_permissions: []
+    username: Worker6
+  model: auth.user
+  pk: 8
+- fields:
+    date_joined: 2013-12-05 11:33:43+00:00
+    email: ''
+    first_name: ''
+    groups:
+    - [Workers]
+    is_active: true
+    is_staff: false
+    is_superuser: false
+    last_login: 2013-12-05 11:33:43+00:00
+    last_name: ''
+    password: pbkdf2_sha256$12000$q6RolrfIVXEn$ZR68YwpJwwnHL7yyUdYGydSCAK+odAlVi9Ww4mxW23Y=
+    user_permissions: []
+    username: Worker7
+  model: auth.user
+  pk: 9
+- fields:
+    date_joined: 2013-12-05 11:38:37+00:00
+    email: ''
+    first_name: ''
+    groups:
+    - [Managers]
+    is_active: true
+    is_staff: false
+    is_superuser: false
+    last_login: 2013-12-05 11:38:37+00:00
+    last_name: ''
+    password: pbkdf2_sha256$12000$ABf2uuFzTXfk$Nb4QqHsnCrBd+qlY1Wp6yzkPAha4zdtv5W4Lw3VzVy8=
+    user_permissions: []
+    username: Manager0
+  model: auth.user
+  pk: 10
+- fields:
+    date_joined: 2013-12-05 11:38:37+00:00
+    email: ''
+    first_name: ''
+    groups:
+    - [Managers]
+    is_active: true
+    is_staff: false
+    is_superuser: false
+    last_login: 2013-12-05 11:38:37+00:00
+    last_name: ''
+    password: pbkdf2_sha256$12000$ABf2uuFzTXfk$Nb4QqHsnCrBd+qlY1Wp6yzkPAha4zdtv5W4Lw3VzVy8=
+    user_permissions: []
+    username: Manager1
+  model: auth.user
+  pk: 11
+- fields:
+    date_joined: 2013-12-05 11:38:37+00:00
+    email: ''
+    first_name: ''
+    groups:
+    - [Managers]
+    is_active: true
+    is_staff: false
+    is_superuser: false
+    last_login: 2013-12-05 11:38:37+00:00
+    last_name: ''
+    password: pbkdf2_sha256$12000$ABf2uuFzTXfk$Nb4QqHsnCrBd+qlY1Wp6yzkPAha4zdtv5W4Lw3VzVy8=
+    user_permissions: []
+    username: Manager2
+  model: auth.user
+  pk: 12
+- fields:
+    description: ''
+    name: Research&Development
+    notes: ''
+    status: CREATED
+    user_set:
+    - [Worker0]
+    - [Worker2]
+    - [Worker5]
+    - [Manager0]
+  model: tracker.costholder
+  pk: 1
+- fields:
+    description: ''
+    name: Sales&Marketing
+    notes: ''
+    status: CREATED
+    user_set:
+    - [Worker2]
+    - [Worker4]
+    - [Manager1]
+  model: tracker.costholder
+  pk: 2
+- fields: {cost_holder: 2, description: '', foreseen_delta: null, foreseen_end_datetime: null,
+    name: Retain a customer, notes: '', status: CREATED}
+  model: tracker.goal
+  pk: 1
+- fields: {cost_holder: 1, description: '', foreseen_delta: null, foreseen_end_datetime: null,
+    name: Research in new client-side frameworks, notes: '', status: CREATED}
+  model: tracker.goal
+  pk: 2
+- fields: {description: '', foreseen_delta: null, foreseen_end_datetime: null, goal: 1,
+    name: Make a flyer, notes: '', status: CREATED}
+  model: tracker.result
+  pk: 1
+- fields: {description: '', foreseen_delta: null, foreseen_end_datetime: null, goal: 2,
+    name: Try AngularJS, notes: '', status: CREATED}
+  model: tracker.result
+  pk: 2
+- fields: {description: '', foreseen_delta: null, foreseen_end_datetime: null, goal: 2,
+    name: Try BackboneJS, notes: '', status: CREATED}
+  model: tracker.result
+  pk: 3
+- fields: {description: '', foreseen_delta: null, foreseen_end_datetime: null, goal: 2,
+    name: Try Bootstrap, notes: '', status: CREATED}
+  model: tracker.result
+  pk: 4
+- fields:
+    foreseen_delta: null
+    foreseen_end_datetime: null
+    name: Testing models with local storage
+    notes: ''
+    result: 3
+    user: [Worker0]
+  model: tracker.activity
+  pk: 1
+- fields: {activity: 1, delta_seconds: null, end_datetime: ! '2013-12-06 18:05:29+00:00',
+    notes: '', start_datetime: ! '2013-12-06 16:05:28+00:00'}
+  model: tracker.activityrecord
+  pk: 1
+- fields: {activity: 1, delta_seconds: null, end_datetime: ! '2013-12-05 10:08:08+00:00',
+    notes: '', start_datetime: ! '2013-12-05 09:08:07+00:00'}
+  model: tracker.activityrecord
+  pk: 2

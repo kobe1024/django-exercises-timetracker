@@ -4,3 +4,4 @@ South
 Sphinx
 pysqlite
 django-extensions 
+pyyaml

@@ -34,6 +34,9 @@ Connect with your web browser to `localhost:8000`
 NOTES
 -----
 
-Export fixtures::
-    python manage.py dumpdata --indent=2 auth tracker > tracker/fixtures/sample_data.json
+Export fixtures in JSON (default)::
+    python manage.py dumpdata --natural --indent 2 auth tracker > tracker/fixtures/sample_data.json
+
+Export fixtures in YAML::
+    python manage.py dumpdata --format yaml --natural --indent 2 auth tracker > tracker/fixtures/sample_data.yaml
 

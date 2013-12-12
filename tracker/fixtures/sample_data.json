@@ -5,7 +5,10 @@
   "fields": {
     "codename": "add_logentry", 
     "name": "Can add log entry", 
-    "content_type": 1
+    "content_type": [
+      "admin", 
+      "logentry"
+    ]
   }
 },
 {
@@ -14,7 +17,10 @@
   "fields": {
     "codename": "change_logentry", 
     "name": "Can change log entry", 
-    "content_type": 1
+    "content_type": [
+      "admin", 
+      "logentry"
+    ]
   }
 },
 {
@@ -23,7 +29,10 @@
   "fields": {
     "codename": "delete_logentry", 
     "name": "Can delete log entry", 
-    "content_type": 1
+    "content_type": [
+      "admin", 
+      "logentry"
+    ]
   }
 },
 {
@@ -32,7 +41,10 @@
   "fields": {
     "codename": "add_permission", 
     "name": "Can add permission", 
-    "content_type": 2
+    "content_type": [
+      "auth", 
+      "permission"
+    ]
   }
 },
 {
@@ -41,7 +53,10 @@
   "fields": {
     "codename": "change_permission", 
     "name": "Can change permission", 
-    "content_type": 2
+    "content_type": [
+      "auth", 
+      "permission"
+    ]
   }
 },
 {
@@ -50,7 +65,10 @@
   "fields": {
     "codename": "delete_permission", 
     "name": "Can delete permission", 
-    "content_type": 2
+    "content_type": [
+      "auth", 
+      "permission"
+    ]
   }
 },
 {
@@ -59,7 +77,10 @@
   "fields": {
     "codename": "add_group", 
     "name": "Can add group", 
-    "content_type": 3
+    "content_type": [
+      "auth", 
+      "group"
+    ]
   }
 },
 {
@@ -68,7 +89,10 @@
   "fields": {
     "codename": "change_group", 
     "name": "Can change group", 
-    "content_type": 3
+    "content_type": [
+      "auth", 
+      "group"
+    ]
   }
 },
 {
@@ -77,7 +101,10 @@
   "fields": {
     "codename": "delete_group", 
     "name": "Can delete group", 
-    "content_type": 3
+    "content_type": [
+      "auth", 
+      "group"
+    ]
   }
 },
 {
@@ -86,7 +113,10 @@
   "fields": {
     "codename": "add_user", 
     "name": "Can add user", 
-    "content_type": 4
+    "content_type": [
+      "auth", 
+      "user"
+    ]
   }
 },
 {
@@ -95,7 +125,10 @@
   "fields": {
     "codename": "change_user", 
     "name": "Can change user", 
-    "content_type": 4
+    "content_type": [
+      "auth", 
+      "user"
+    ]
   }
 },
 {
@@ -104,7 +137,10 @@
   "fields": {
     "codename": "delete_user", 
     "name": "Can delete user", 
-    "content_type": 4
+    "content_type": [
+      "auth", 
+      "user"
+    ]
   }
 },
 {
@@ -113,7 +149,10 @@
   "fields": {
     "codename": "add_contenttype", 
     "name": "Can add content type", 
-    "content_type": 5
+    "content_type": [
+      "contenttypes", 
+      "contenttype"
+    ]
   }
 },
 {
@@ -122,7 +161,10 @@
   "fields": {
     "codename": "change_contenttype", 
     "name": "Can change content type", 
-    "content_type": 5
+    "content_type": [
+      "contenttypes", 
+      "contenttype"
+    ]
   }
 },
 {
@@ -131,7 +173,10 @@
   "fields": {
     "codename": "delete_contenttype", 
     "name": "Can delete content type", 
-    "content_type": 5
+    "content_type": [
+      "contenttypes", 
+      "contenttype"
+    ]
   }
 },
 {
@@ -140,7 +185,10 @@
   "fields": {
     "codename": "add_session", 
     "name": "Can add session", 
-    "content_type": 6
+    "content_type": [
+      "sessions", 
+      "session"
+    ]
   }
 },
 {
@@ -149,7 +197,10 @@
   "fields": {
     "codename": "change_session", 
     "name": "Can change session", 
-    "content_type": 6
+    "content_type": [
+      "sessions", 
+      "session"
+    ]
   }
 },
 {
@@ -158,7 +209,10 @@
   "fields": {
     "codename": "delete_session", 
     "name": "Can delete session", 
-    "content_type": 6
+    "content_type": [
+      "sessions", 
+      "session"
+    ]
   }
 },
 {
@@ -167,7 +221,10 @@
   "fields": {
     "codename": "add_costholder", 
     "name": "Can add cost holder", 
-    "content_type": 7
+    "content_type": [
+      "tracker", 
+      "costholder"
+    ]
   }
 },
 {
@@ -176,7 +233,10 @@
   "fields": {
     "codename": "change_costholder", 
     "name": "Can change cost holder", 
-    "content_type": 7
+    "content_type": [
+      "tracker", 
+      "costholder"
+    ]
   }
 },
 {
@@ -185,7 +245,10 @@
   "fields": {
     "codename": "delete_costholder", 
     "name": "Can delete cost holder", 
-    "content_type": 7
+    "content_type": [
+      "tracker", 
+      "costholder"
+    ]
   }
 },
 {
@@ -194,7 +257,10 @@
   "fields": {
     "codename": "add_goal", 
     "name": "Can add goal", 
-    "content_type": 8
+    "content_type": [
+      "tracker", 
+      "goal"
+    ]
   }
 },
 {
@@ -203,7 +269,10 @@
   "fields": {
     "codename": "change_goal", 
     "name": "Can change goal", 
-    "content_type": 8
+    "content_type": [
+      "tracker", 
+      "goal"
+    ]
   }
 },
 {
@@ -212,7 +281,10 @@
   "fields": {
     "codename": "delete_goal", 
     "name": "Can delete goal", 
-    "content_type": 8
+    "content_type": [
+      "tracker", 
+      "goal"
+    ]
   }
 },
 {
@@ -221,7 +293,10 @@
   "fields": {
     "codename": "add_result", 
     "name": "Can add Pragmatical Result", 
-    "content_type": 9
+    "content_type": [
+      "tracker", 
+      "result"
+    ]
   }
 },
 {
@@ -230,7 +305,10 @@
   "fields": {
     "codename": "change_result", 
     "name": "Can change Pragmatical Result", 
-    "content_type": 9
+    "content_type": [
+      "tracker", 
+      "result"
+    ]
   }
 },
 {
@@ -239,7 +317,10 @@
   "fields": {
     "codename": "delete_result", 
     "name": "Can delete Pragmatical Result", 
-    "content_type": 9
+    "content_type": [
+      "tracker", 
+      "result"
+    ]
   }
 },
 {
@@ -248,7 +329,10 @@
   "fields": {
     "codename": "add_activity", 
     "name": "Can add activity", 
-    "content_type": 10
+    "content_type": [
+      "tracker", 
+      "activity"
+    ]
   }
 },
 {
@@ -257,7 +341,10 @@
   "fields": {
     "codename": "change_activity", 
     "name": "Can change activity", 
-    "content_type": 10
+    "content_type": [
+      "tracker", 
+      "activity"
+    ]
   }
 },
 {
@@ -266,7 +353,10 @@
   "fields": {
     "codename": "delete_activity", 
     "name": "Can delete activity", 
-    "content_type": 10
+    "content_type": [
+      "tracker", 
+      "activity"
+    ]
   }
 },
 {
@@ -275,7 +365,10 @@
   "fields": {
     "codename": "add_activityrecord", 
     "name": "Can add activity record", 
-    "content_type": 11
+    "content_type": [
+      "tracker", 
+      "activityrecord"
+    ]
   }
 },
 {
@@ -284,7 +377,10 @@
   "fields": {
     "codename": "change_activityrecord", 
     "name": "Can change activity record", 
-    "content_type": 11
+    "content_type": [
+      "tracker", 
+      "activityrecord"
+    ]
   }
 },
 {
@@ -293,7 +389,10 @@
   "fields": {
     "codename": "delete_activityrecord", 
     "name": "Can delete activity record", 
-    "content_type": 11
+    "content_type": [
+      "tracker", 
+      "activityrecord"
+    ]
   }
 },
 {
@@ -302,8 +401,16 @@
   "fields": {
     "name": "Managers", 
     "permissions": [
-      19, 
-      20
+      [
+        "add_costholder", 
+        "tracker", 
+        "costholder"
+      ], 
+      [
+        "change_costholder", 
+        "tracker", 
+        "costholder"
+      ]
     ]
   }
 },
@@ -313,8 +420,16 @@
   "fields": {
     "name": "Workers", 
     "permissions": [
-      28, 
-      29
+      [
+        "add_activity", 
+        "tracker", 
+        "activity"
+      ], 
+      [
+        "change_activity", 
+        "tracker", 
+        "activity"
+      ]
     ]
   }
 },
@@ -328,12 +443,12 @@
     "is_active": true, 
     "is_superuser": true, 
     "is_staff": true, 
-    "last_login": "2013-12-05T11:33:07.794Z", 
+    "last_login": "2013-12-12T23:11:04.603Z", 
     "groups": [], 
     "user_permissions": [], 
     "password": "pbkdf2_sha256$12000$iXNLhVJZOO6F$KU+oCmB0MEN65fnMJxAYyZCogt5mgJ7EcZM8zVy2fx8=", 
     "email": "kobe@befair.it", 
-    "date_joined": "2013-12-05T11:32:29.315Z"
+    "date_joined": "2013-12-05T10:32:29.315Z"
   }
 },
 {
@@ -346,14 +461,16 @@
     "is_active": true, 
     "is_superuser": false, 
     "is_staff": false, 
-    "last_login": "2013-12-05T12:33:43Z", 
+    "last_login": "2013-12-05T11:33:43Z", 
     "groups": [
-      2
+      [
+        "Workers"
+      ]
     ], 
     "user_permissions": [], 
     "password": "pbkdf2_sha256$12000$q6RolrfIVXEn$ZR68YwpJwwnHL7yyUdYGydSCAK+odAlVi9Ww4mxW23Y=", 
     "email": "", 
-    "date_joined": "2013-12-05T12:33:43Z"
+    "date_joined": "2013-12-05T11:33:43Z"
   }
 },
 {
@@ -366,14 +483,16 @@
     "is_active": true, 
     "is_superuser": false, 
     "is_staff": false, 
-    "last_login": "2013-12-05T12:33:43Z", 
+    "last_login": "2013-12-05T11:33:43Z", 
     "groups": [
-      2
+      [
+        "Workers"
+      ]
     ], 
     "user_permissions": [], 
     "password": "pbkdf2_sha256$12000$q6RolrfIVXEn$ZR68YwpJwwnHL7yyUdYGydSCAK+odAlVi9Ww4mxW23Y=", 
     "email": "", 
-    "date_joined": "2013-12-05T12:33:43Z"
+    "date_joined": "2013-12-05T11:33:43Z"
   }
 },
 {
@@ -386,14 +505,16 @@
     "is_active": true, 
     "is_superuser": false, 
     "is_staff": false, 
-    "last_login": "2013-12-05T12:33:43Z", 
+    "last_login": "2013-12-05T11:33:43Z", 
     "groups": [
-      2
+      [
+        "Workers"
+      ]
     ], 
     "user_permissions": [], 
     "password": "pbkdf2_sha256$12000$q6RolrfIVXEn$ZR68YwpJwwnHL7yyUdYGydSCAK+odAlVi9Ww4mxW23Y=", 
     "email": "", 
-    "date_joined": "2013-12-05T12:33:43Z"
+    "date_joined": "2013-12-05T11:33:43Z"
   }
 },
 {
@@ -406,14 +527,16 @@
     "is_active": true, 
     "is_superuser": false, 
     "is_staff": false, 
-    "last_login": "2013-12-05T12:33:43Z", 
+    "last_login": "2013-12-05T11:33:43Z", 
     "groups": [
-      2
+      [
+        "Workers"
+      ]
     ], 
     "user_permissions": [], 
     "password": "pbkdf2_sha256$12000$q6RolrfIVXEn$ZR68YwpJwwnHL7yyUdYGydSCAK+odAlVi9Ww4mxW23Y=", 
     "email": "", 
-    "date_joined": "2013-12-05T12:33:43Z"
+    "date_joined": "2013-12-05T11:33:43Z"
   }
 },
 {
@@ -426,14 +549,16 @@
     "is_active": true, 
     "is_superuser": false, 
     "is_staff": false, 
-    "last_login": "2013-12-05T12:33:43Z", 
+    "last_login": "2013-12-05T11:33:43Z", 
     "groups": [
-      2
+      [
+        "Workers"
+      ]
     ], 
     "user_permissions": [], 
     "password": "pbkdf2_sha256$12000$q6RolrfIVXEn$ZR68YwpJwwnHL7yyUdYGydSCAK+odAlVi9Ww4mxW23Y=", 
     "email": "", 
-    "date_joined": "2013-12-05T12:33:43Z"
+    "date_joined": "2013-12-05T11:33:43Z"
   }
 },
 {
@@ -446,14 +571,16 @@
     "is_active": true, 
     "is_superuser": false, 
     "is_staff": false, 
-    "last_login": "2013-12-05T12:33:43Z", 
+    "last_login": "2013-12-05T11:33:43Z", 
     "groups": [
-      2
+      [
+        "Workers"
+      ]
     ], 
     "user_permissions": [], 
     "password": "pbkdf2_sha256$12000$q6RolrfIVXEn$ZR68YwpJwwnHL7yyUdYGydSCAK+odAlVi9Ww4mxW23Y=", 
     "email": "", 
-    "date_joined": "2013-12-05T12:33:43Z"
+    "date_joined": "2013-12-05T11:33:43Z"
   }
 },
 {
@@ -466,14 +593,16 @@
     "is_active": true, 
     "is_superuser": false, 
     "is_staff": false, 
-    "last_login": "2013-12-05T12:33:43Z", 
+    "last_login": "2013-12-05T11:33:43Z", 
     "groups": [
-      2
+      [
+        "Workers"
+      ]
     ], 
     "user_permissions": [], 
     "password": "pbkdf2_sha256$12000$q6RolrfIVXEn$ZR68YwpJwwnHL7yyUdYGydSCAK+odAlVi9Ww4mxW23Y=", 
     "email": "", 
-    "date_joined": "2013-12-05T12:33:43Z"
+    "date_joined": "2013-12-05T11:33:43Z"
   }
 },
 {
@@ -486,14 +615,16 @@
     "is_active": true, 
     "is_superuser": false, 
     "is_staff": false, 
-    "last_login": "2013-12-05T12:33:43Z", 
+    "last_login": "2013-12-05T11:33:43Z", 
     "groups": [
-      2
+      [
+        "Workers"
+      ]
     ], 
     "user_permissions": [], 
     "password": "pbkdf2_sha256$12000$q6RolrfIVXEn$ZR68YwpJwwnHL7yyUdYGydSCAK+odAlVi9Ww4mxW23Y=", 
     "email": "", 
-    "date_joined": "2013-12-05T12:33:43Z"
+    "date_joined": "2013-12-05T11:33:43Z"
   }
 },
 {
@@ -506,14 +637,16 @@
     "is_active": true, 
     "is_superuser": false, 
     "is_staff": false, 
-    "last_login": "2013-12-05T12:38:37Z", 
+    "last_login": "2013-12-05T11:38:37Z", 
     "groups": [
-      1
+      [
+        "Managers"
+      ]
     ], 
     "user_permissions": [], 
     "password": "pbkdf2_sha256$12000$ABf2uuFzTXfk$Nb4QqHsnCrBd+qlY1Wp6yzkPAha4zdtv5W4Lw3VzVy8=", 
     "email": "", 
-    "date_joined": "2013-12-05T12:38:37Z"
+    "date_joined": "2013-12-05T11:38:37Z"
   }
 },
 {
@@ -526,14 +659,16 @@
     "is_active": true, 
     "is_superuser": false, 
     "is_staff": false, 
-    "last_login": "2013-12-05T12:38:37Z", 
+    "last_login": "2013-12-05T11:38:37Z", 
     "groups": [
-      1
+      [
+        "Managers"
+      ]
     ], 
     "user_permissions": [], 
     "password": "pbkdf2_sha256$12000$ABf2uuFzTXfk$Nb4QqHsnCrBd+qlY1Wp6yzkPAha4zdtv5W4Lw3VzVy8=", 
     "email": "", 
-    "date_joined": "2013-12-05T12:38:37Z"
+    "date_joined": "2013-12-05T11:38:37Z"
   }
 },
 {
@@ -546,14 +681,175 @@
     "is_active": true, 
     "is_superuser": false, 
     "is_staff": false, 
-    "last_login": "2013-12-05T12:38:37Z", 
+    "last_login": "2013-12-05T11:38:37Z", 
     "groups": [
-      1
+      [
+        "Managers"
+      ]
     ], 
     "user_permissions": [], 
     "password": "pbkdf2_sha256$12000$ABf2uuFzTXfk$Nb4QqHsnCrBd+qlY1Wp6yzkPAha4zdtv5W4Lw3VzVy8=", 
     "email": "", 
-    "date_joined": "2013-12-05T12:38:37Z"
+    "date_joined": "2013-12-05T11:38:37Z"
+  }
+},
+{
+  "pk": 1, 
+  "model": "tracker.costholder", 
+  "fields": {
+    "status": "CREATED", 
+    "notes": "", 
+    "user_set": [
+      [
+        "Worker0"
+      ], 
+      [
+        "Worker2"
+      ], 
+      [
+        "Worker5"
+      ], 
+      [
+        "Manager0"
+      ]
+    ], 
+    "name": "Research&Development", 
+    "description": ""
+  }
+},
+{
+  "pk": 2, 
+  "model": "tracker.costholder", 
+  "fields": {
+    "status": "CREATED", 
+    "notes": "", 
+    "user_set": [
+      [
+        "Worker2"
+      ], 
+      [
+        "Worker4"
+      ], 
+      [
+        "Manager1"
+      ]
+    ], 
+    "name": "Sales&Marketing", 
+    "description": ""
+  }
+},
+{
+  "pk": 1, 
+  "model": "tracker.goal", 
+  "fields": {
+    "status": "CREATED", 
+    "description": "", 
+    "notes": "", 
+    "foreseen_end_datetime": null, 
+    "foreseen_delta": null, 
+    "cost_holder": 2, 
+    "name": "Retain a customer"
+  }
+},
+{
+  "pk": 2, 
+  "model": "tracker.goal", 
+  "fields": {
+    "status": "CREATED", 
+    "description": "", 
+    "notes": "", 
+    "foreseen_end_datetime": null, 
+    "foreseen_delta": null, 
+    "cost_holder": 1, 
+    "name": "Research in new client-side frameworks"
+  }
+},
+{
+  "pk": 1, 
+  "model": "tracker.result", 
+  "fields": {
+    "status": "CREATED", 
+    "description": "", 
+    "notes": "", 
+    "foreseen_end_datetime": null, 
+    "name": "Make a flyer", 
+    "foreseen_delta": null, 
+    "goal": 1
+  }
+},
+{
+  "pk": 2, 
+  "model": "tracker.result", 
+  "fields": {
+    "status": "CREATED", 
+    "description": "", 
+    "notes": "", 
+    "foreseen_end_datetime": null, 
+    "name": "Try AngularJS", 
+    "foreseen_delta": null, 
+    "goal": 2
+  }
+},
+{
+  "pk": 3, 
+  "model": "tracker.result", 
+  "fields": {
+    "status": "CREATED", 
+    "description": "", 
+    "notes": "", 
+    "foreseen_end_datetime": null, 
+    "name": "Try BackboneJS", 
+    "foreseen_delta": null, 
+    "goal": 2
+  }
+},
+{
+  "pk": 4, 
+  "model": "tracker.result", 
+  "fields": {
+    "status": "CREATED", 
+    "description": "", 
+    "notes": "", 
+    "foreseen_end_datetime": null, 
+    "name": "Try Bootstrap", 
+    "foreseen_delta": null, 
+    "goal": 2
+  }
+},
+{
+  "pk": 1, 
+  "model": "tracker.activity", 
+  "fields": {
+    "name": "Testing models with local storage", 
+    "notes": "", 
+    "foreseen_end_datetime": null, 
+    "result": 3, 
+    "foreseen_delta": null, 
+    "user": [
+      "Worker0"
+    ]
+  }
+},
+{
+  "pk": 1, 
+  "model": "tracker.activityrecord", 
+  "fields": {
+    "notes": "", 
+    "start_datetime": "2013-12-06T16:05:28Z", 
+    "end_datetime": "2013-12-06T18:05:29Z", 
+    "delta_seconds": null, 
+    "activity": 1
+  }
+},
+{
+  "pk": 2, 
+  "model": "tracker.activityrecord", 
+  "fields": {
+    "notes": "", 
+    "start_datetime": "2013-12-05T09:08:07Z", 
+    "end_datetime": "2013-12-05T10:08:08Z", 
+    "delta_seconds": null, 
+    "activity": 1
   }
 }
 ]
