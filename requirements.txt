@@ -5,3 +5,4 @@ Sphinx
 pysqlite
 django-extensions 
 pyyaml
+django-debug-toolbar
